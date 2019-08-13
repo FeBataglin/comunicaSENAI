@@ -1,0 +1,49 @@
+/*{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  }
+}*/
+{
+	"compilerOptions": {
+		"baseUrl": "",
+		"allowSyntheticDefaultImports": true,
+		"declaration": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"module": "es2015",
+    "moduleResolution": "node",
+    "importHelpers": true,
+		"sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+		"paths": {
+			"@angular/*": ["node_modules/@angular/*"]
+		}
+	},
+	"include": ["src/**/*.ts", "node_modules/ng4-fittext/*.d.ts"],
+	"exclude": [],
+	"compileOnSave": true,
+}

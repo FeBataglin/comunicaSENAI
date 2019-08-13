@@ -1,0 +1,103 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-button size="small" name="arrow-back" fill="clear" slot="start" (click)="closeModal()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Cadastro de Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="thf-page-user-register">
+    <form class="thf-page-login-form" [formGroup]="userForm">
+      <ion-grid> 
+        <thf-input
+          [(ngModel)]="user.name" 
+          type="text" 
+          formControlName="name"
+          t-label="Nome"
+          t-placeholder="Informe seu nome"
+          t-required="true">
+        </thf-input>
+        <thf-input
+          [(ngModel)]="user.lastname" 
+          type="text"
+          formControlName="lastname" 
+          t-label="Sobrenome"
+          t-placeholder="Informe seu sobrenome"
+          t-required="true">
+        </thf-input>
+        <thf-input
+          [(ngModel)]="user.email" 
+          type="text"
+          formControlName="email" 
+          t-label="E-mail"
+          t-placeholder="Informe seu e-mail"
+          t-required="true">
+        </thf-input>
+        <thf-input
+          type="password"
+          [(ngModel)]="user.password"
+          formControlName="password" 
+          t-label="Senha"
+          t-placeholder="Informe sua senha"
+          t-required="true">
+        </thf-input>
+        <thf-input
+          [(ngModel)]="user.confirmPassword"
+          formControlName="confirmPassword" 
+          t-label="Confirmar Senha"
+          t-placeholder="Confirme sua senha"
+          t-required="true">
+        </thf-input>
+        <thf-switch
+          ng-model="isHidden"
+          name="receiveNotifications"
+          (t-change)="viewType = !viewType"
+          t-label="Receber notificações?"
+          t-label-off="Não, obrigado."
+          t-label-on="Sim, por favor.">
+        </thf-switch>
+
+        <thf-checkbox-group 
+          *ngIf="viewType"
+          (t-change)="EventEmitter"
+          [t-columns]="3"
+          t-disabled="false"
+          [(ngModel)]="user.chooseNotification" 
+          formControlName="chooseNotification"
+          t-indeterminate="boolean"
+          name="chooseNotification"
+          formArrayName="chooseNotification"
+          [t-options]="[{ value: '1', label: 'Ensino Médio' }, 
+                        { value: '2', label: 'Cursos Técnicos' },
+                        { value: '3', label: 'Cursos Superiores' },
+                        { value: '4', label: 'Bolsas' },
+                        { value: '5', label: 'Eventos' },
+                        { value: '6', label: 'Mundo SENAI' }
+                      ]">
+        </thf-checkbox-group>
+
+        <thf-switch
+          name="noticesByEmail"
+          t-label="Receber notícias por e-mail?"
+          t-label-off="Não, obrigado."
+          t-label-on="Sim, por favor.">
+        </thf-switch>
+        <thf-button
+          [t-disabled]="!userForm.valid"
+          (t-click)="registerUser(user)"
+          class="registerBtn thf-xl-12 thf-lg-12 thf-md-12 thf-sm-12"
+          t-label="Registrar-se"
+          t-type="primary">
+        </thf-button>
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>

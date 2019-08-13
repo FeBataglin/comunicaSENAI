@@ -1,0 +1,53 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+.search, .user {
+  font-size: 24px;
+  color: #0c9abe;
+  padding: 8px;
+}
+
+ion-card-header {
+  padding: 10px;
+}
+
+ion-card-content, p {
+  padding: 10px;
+  text-align: left;
+}
+
+.ion-card-content-option {
+  border-top: 1px solid;
+  padding: 0px;
+}
+
+ion-card-subtitle {
+  color: black;
+  margin-bottom: 2px;
+}
+
+.shareOption {
+  width: 55%;
+}
+
+.favoriteOption {
+  width: 45%;
+}
+
+ion-item {
+  padding: 0px;
+  font-size: 12px;
+}
+
+ion-label {
+  margin-left: -10px;
+}
+
+.footerCard {
+  font-size: 15px;
+  text-align: center;
+}
+
+

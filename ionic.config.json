@@ -1,0 +1,7 @@
+{
+  "name": "comunicaSENAI",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
