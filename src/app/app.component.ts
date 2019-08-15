@@ -22,6 +22,11 @@ export class AppComponent {
       icon: 'star'
     },
     {
+      title: 'Cadastro de Novidades',
+      url: '/news',
+      icon: 'md-paper'
+    },
+    {
       title: 'Configurações',
       url: '/config',
       icon: 'cog'

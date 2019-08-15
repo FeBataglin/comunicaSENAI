@@ -55,4 +55,9 @@ export class NewsPage implements OnInit {
         })
     }
   }
+
+  upload() {
+    console.log("oi")
+  }
+
 }

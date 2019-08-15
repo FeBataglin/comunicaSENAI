@@ -28,26 +28,24 @@ ion-card-subtitle {
   margin-bottom: 2px;
 }
 
-.shareOption {
-  width: 55%;
-}
-
-.favoriteOption {
-  width: 45%;
-}
-
 ion-item {
   padding: 0px;
   font-size: 12px;
+  width: 100%;
 }
 
 ion-label {
   margin-left: -10px;
 }
 
-.footerCard {
-  font-size: 15px;
-  text-align: center;
+ion-icon {
+  margin-left: 50%;
 }
 
+ion-segment {
+  margin-bottom: 3px;
+}
 
+thf-divider {
+  border: 2px;
+}
