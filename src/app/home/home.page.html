@@ -39,8 +39,8 @@
   <ion-list>
     <ion-item *ngFor="let new of news | async" lines="none">
       <ion-card class="welcome-card">
-        <!--<iframe width="100%" height="100%" src="{{new.video}}" frameborder="0" allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>-->
+        <iframe width="100%" height="100%" [src]="new.video | safe" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
         <ion-img src="{{new.image}}"></ion-img>
         <ion-card-header>
           <ion-card-subtitle>{{new.date}}</ion-card-subtitle>

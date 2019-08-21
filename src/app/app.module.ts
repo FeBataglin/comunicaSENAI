@@ -18,16 +18,18 @@ import { ThfModule } from '@totvs/thf-ui';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { UserService } from '../app/providers/user/user.service';
 import { NewsService } from './providers/news/news.service';
 
-import { YoutubePipe } from './pipes/youtube/youtube.pipe'
 import { Camera } from '@ionic-native/camera/ngx';
-
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { SafePipe } from './pipe/youtube.pipe';
 
 @NgModule({
-  declarations: [AppComponent, YoutubePipe],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { Camera } from '@ionic-native/camera/ngx';
     FormsModule,
     CommonModule,
     ThfModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyBRPIf82ebIzcPdH0VGy8qdxKlgtN2h46U",
       authDomain: "comunicasenai-93a8e.firebaseapp.com",
@@ -53,7 +56,8 @@ import { Camera } from '@ionic-native/camera/ngx';
   ],
   providers: [
     StatusBar,
-    YoutubePipe,
+    ImagePicker,
+    WebView,
     SplashScreen,
     Camera,
     { provide: ErrorHandler, useClass: ErrorHandler },

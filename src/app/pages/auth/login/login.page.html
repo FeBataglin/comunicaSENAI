@@ -13,16 +13,14 @@
   </ion-grid>
   <form [formGroup]="loginForm">
     <ion-grid>
-      <thf-input
-        [(ngModel)]="user.email"
+      <thf-email
+        [(ngModel)]="user.email" 
+        type="text"
         formControlName="email" 
-        type="email" 
-        name="email" 
-        t-label="Usuário" 
-        t-icon="thf-icon-user" 
-        t-placeholder="Insira seu usuário"
+        t-label="Usuário"
+         t-placeholder="Insira seu e-mail"
         t-required="true">
-      </thf-input>
+      </thf-email>
       <thf-password
         name="password"
         formControlName="password" 
@@ -40,7 +38,7 @@
         name="rememberUser"
         t-label-off="Não, obrigado."
         t-label-on="Sim, por favor." 
-        t-label="Lembrar usuário?" 
+        t-label="Continuar conectado?" 
         (t-change)="rememberUser()">
       </thf-switch>
 

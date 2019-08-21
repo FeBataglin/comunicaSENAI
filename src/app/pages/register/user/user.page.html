@@ -17,45 +17,52 @@
   <div class="thf-page-user-register">
     <form class="thf-page-login-form" [formGroup]="userForm">
       <ion-grid> 
-        <thf-input
+        <thf-login
           [(ngModel)]="user.name" 
           type="text" 
           formControlName="name"
           t-label="Nome"
-          t-placeholder="Informe seu nome"
+          t-placeholder="Insira seu nome"
           t-required="true">
-        </thf-input>
-        <thf-input
+        </thf-login>
+        <thf-login
           [(ngModel)]="user.lastname" 
           type="text"
           formControlName="lastname" 
           t-label="Sobrenome"
-          t-placeholder="Informe seu sobrenome"
+          t-placeholder="Insira seu sobrenome"
           t-required="true">
-        </thf-input>
-        <thf-input
+        </thf-login>
+        <thf-email
           [(ngModel)]="user.email" 
           type="text"
           formControlName="email" 
           t-label="E-mail"
-          t-placeholder="Informe seu e-mail"
+          t-placeholder="Insira seu e-mail"
           t-required="true">
-        </thf-input>
-        <thf-input
-          type="password"
-          [(ngModel)]="user.password"
+        </thf-email>
+        <thf-password
+          name="password"
           formControlName="password" 
+          [(ngModel)]="user.password"
+          t-clean
           t-label="Senha"
-          t-placeholder="Informe sua senha"
+          t-placeholder="Insira sua senha"
+          t-minlength="6"
+          t-maxlength="12"
           t-required="true">
-        </thf-input>
-        <thf-input
-          [(ngModel)]="user.confirmPassword"
+        </thf-password>
+        <thf-password
+          name="password"
           formControlName="confirmPassword" 
-          t-label="Confirmar Senha"
-          t-placeholder="Confirme sua senha"
+          [(ngModel)]="user.confirmPassword"
+          t-clean
+          t-label="Confirmar senha"
+          t-placeholder="Insira novamente sua senha"
+          t-minlength="6"
+          t-maxlength="12"
           t-required="true">
-        </thf-input>
+        </thf-password>
         <thf-switch
           ng-model="isHidden"
           name="receiveNotifications"
